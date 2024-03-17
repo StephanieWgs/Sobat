@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Sobat</string>
+    <string name="sapaan">Hai, Mums!</string>
+    <string name="ajakan">Ayo pantau tumbuh kembang si Kecil!</string>
+    <string name="namaAnak">Budi Susanto</string>
+    <string name="masuk">Masuk tahun ke-2</string>
+    <string name="umur">2 Tahun</string>
+    <string name="captionTambah">Tambahkan data si Kecil di sini!</string>
+    <string name="buttonTmbh">Tambah Anak</string>
+    <string name="menu">Menu</string>
+    <string name="catat">Catat</string>
+    <string name="forum">Forum</string>
+    <string name="konsul">Konsultasi</string>
+    <string name="imun">Imunisasi</string>
+    <string name="judulBerita">Bagaimana Caranya Agar si Kecil Doyan Makan Terus?</string>
+
+    <string name="namaIbu">Santika Putri</string>
+    <string name="detailPosting">Diposting 1 jam yang lalu</string>
+    <string name="judulForum">Anakku suka bersin kalo dekat sama kucing rumah.</string>
+
+    <string name="detail">Detail</string>
+    <string name="tmbhProfil">Tambah Profil Anak</string>
 </resources>

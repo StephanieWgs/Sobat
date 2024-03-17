@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="judul">24sp</dimen>
+    <dimen name="subjudul">20sp</dimen>
+    <dimen name="fntBsr">16sp</dimen>
+    <dimen name="fntSdg">18sp</dimen>
+    <dimen name="fntKcl">14sp</dimen>
+</resources>
