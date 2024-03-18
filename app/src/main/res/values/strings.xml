@@ -20,4 +20,11 @@
 
     <string name="detail">Detail</string>
     <string name="tmbhProfil">Tambah Profil Anak</string>
+
+    <string name="vaksinImun">Vaksin &amp; Imunisasi</string>
+    <string name="detailVaksinImun">Ayo cek status vaksinasi dan status imunisasi sobat kecil!</string>
+    <string name="bantuanMedis">Bantuan Medis</string>
+    <string name="detailBantuanMedis">Butuh bantuan lain dari pihak profesional? Cari dari sini!</string>
+    <string name="rsAnak">RS Anak Terdekat</string>
+    <string name="detailRs">Cari disini rumah sakit anak terdekat!</string>
 </resources>

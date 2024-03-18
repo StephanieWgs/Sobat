@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Imunisasi">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/tombolBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="end|top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/arrow"
+                android:scaleX="-1">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/imun"
+                android:textColor="@color/hitam"
+                android:textSize="@dimen/judul"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tombolNotif"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/notification"
+            android:gravity="end|top">
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        >
+        <LinearLayout
+            android:id="@+id/vaksinImun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/kotak_forum"
+            android:backgroundTint="@color/hijauTua"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_margin="16dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/tombol_suntik">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20sp">
+                <TextView
+                    android:textSize="@dimen/subjudul"
+                    android:textColor="@color/putih"
+                    android:textStyle="bold"
+                    android:text="@string/vaksinImun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textSize="@dimen/fntKcl"
+                    android:textColor="@color/putih"
+                    android:text="@string/detailVaksinImun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bantuanMedis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/kotak_forum"
+            android:backgroundTint="@color/kuningTua"
+            >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/tombol_bantuanlain">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20sp">
+                <TextView
+                    android:textSize="@dimen/subjudul"
+                    android:textColor="@color/hijauTua"
+                    android:textStyle="bold"
+                    android:text="@string/bantuanMedis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textSize="@dimen/fntKcl"
+                    android:textColor="@color/hijauTua"
+                    android:text="@string/detailBantuanMedis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/RsDekat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity=""
+            android:background="@drawable/kotak_forum"
+            android:backgroundTint="@color/hijauTua"
+            >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/tombol_rs">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20sp">
+                <TextView
+                    android:textSize="@dimen/subjudul"
+                    android:textColor="@color/putih"
+                    android:textStyle="bold"
+                    android:text="@string/rsAnak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textSize="@dimen/fntKcl"
+                    android:textColor="@color/putih"
+                    android:text="@string/detailRs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
