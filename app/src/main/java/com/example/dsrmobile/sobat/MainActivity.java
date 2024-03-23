@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout catat1,catat2;
+    LinearLayout catat1,catat2,profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         catat1 = (LinearLayout) findViewById(R.id.catat1);
         catat2 = (LinearLayout) findViewById(R.id.catat2);
+        profile = (LinearLayout) findViewById(R.id.profile);
 
         catat1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Catat.class);
+                startActivity(intent);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Profil.class);
                 startActivity(intent);
             }
         });

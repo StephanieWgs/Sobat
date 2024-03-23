@@ -27,4 +27,27 @@
     <string name="detailBantuanMedis">Butuh bantuan lain dari pihak profesional? Cari dari sini!</string>
     <string name="rsAnak">RS Anak Terdekat</string>
     <string name="detailRs">Cari disini rumah sakit anak terdekat!</string>
+
+    <string name="profAnak">Profil Anak</string>
+    <string name="info">Informasi Sobat Kecil</string>
+
+    <string name="labelNamaAnak">Nama Anak</string>
+    <string name="labelTglLhrAnak">Tanggal Lahir Anak</string>
+    <string name="labelGenderAnak">Gender Anak</string>
+
+    <string name="btnProfilAnak">Ubah Profil Anak</string>
+    <string name="profil">Profil</string>
+
+    <string name="pr">Perempuan</string>
+    <string name="tglLhrIbu">18 Jan 1995</string>
+
+    <string name="btnProfilIbu">Ubah Profil Ibu</string>
+    <string name="sobatKcl">Sobat Kecil Mums</string>
+    <string name="general">General</string>
+
+    <string name="pengaturan">Pengaturan</string>
+    <string name="logout">Logout</string>
+    <string name="bug">Laporkan Bug</string>
+
+
 </resources>

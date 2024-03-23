@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 
 public class Catat extends AppCompatActivity {
 
-    LinearLayout home;
+    LinearLayout home,profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +17,20 @@ public class Catat extends AppCompatActivity {
         setContentView(R.layout.activity_catat);
 
         home = (LinearLayout) findViewById(R.id.home);
+        profile = (LinearLayout) findViewById(R.id.profile);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Catat.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Catat.this, Profil.class);
                 startActivity(intent);
             }
         });
