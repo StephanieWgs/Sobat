@@ -227,6 +227,8 @@
                         android:layout_marginStart="20dp"
                         android:gravity="center">
                         <LinearLayout
+                            android:id="@+id/konsul"
+                            android:orientation="horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/tombol_konsul">
@@ -249,6 +251,8 @@
                         android:layout_marginStart="20dp"
                         android:gravity="center">
                         <LinearLayout
+                            android:id="@+id/forum"
+                            android:orientation="horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/tombol_forum">
@@ -271,6 +275,8 @@
                         android:layout_marginStart="20dp"
                         android:gravity="center">
                         <LinearLayout
+                            android:id="@+id/imunisasi"
+                            android:orientation="horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/tombol_imun">
