@@ -2,20 +2,27 @@ package com.example.dsrmobile.sobat.Model;
 
 import java.time.LocalDate;
 
-public class Ibu {
+import io.realm.RealmObject;
+
+public class Ibu extends RealmObject {
 
     private String idIbu;
     private String namaIbu;
     private String noTelp;
-    private LocalDate tglLahirIbu;
+    private String tglLahirIbu;
 
-    public Ibu(){}
+    private UserLogin userLogin;
 
-    public Ibu(String idIbu, String namaIbu, String noTelp, LocalDate tglLahirIbu) {
+    public Ibu(){
+
+    }
+
+    public Ibu(String idIbu, String namaIbu, String noTelp, String tglLahirIbu) {
         this.idIbu = idIbu;
         this.namaIbu = namaIbu;
         this.noTelp = noTelp;
         this.tglLahirIbu = tglLahirIbu;
+        this.userLogin = new UserLogin();
     }
 
     public String getIdIbu() {
@@ -42,11 +49,19 @@ public class Ibu {
         this.noTelp = noTelp;
     }
 
-    public LocalDate getTglLahirIbu() {
+    public String getTglLahirIbu() {
         return tglLahirIbu;
     }
 
-    public void setTglLahirIbu(LocalDate tglLahirIbu) {
+    public void setTglLahirIbu(String tglLahirIbu) {
         this.tglLahirIbu = tglLahirIbu;
+    }
+
+    public UserLogin getUserLogin() {
+        return userLogin;
+    }
+
+    public void setUserLogin(UserLogin userLogin) {
+        this.userLogin = userLogin;
     }
 }

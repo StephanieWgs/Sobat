@@ -2,25 +2,28 @@ package com.example.dsrmobile.sobat.Model;
 
 import java.time.LocalDate;
 
-public class DataFisikAnak {
+import io.realm.RealmObject;
+
+public class DataFisikAnak extends RealmObject{
 
     private String idData;
-    private LocalDate tglData;
+    private String tglData;
     private int berat;
     private int tinggi;
     private int lingkarKepala;
 
-    private Anak anak;
+    private String idAnak;
 
     public DataFisikAnak(){}
 
-    public DataFisikAnak(String idData, LocalDate tglData, int berat, int tinggi, int lingkarKepala, Anak anak) {
+    public DataFisikAnak(String idData, String tglData, int berat, int tinggi, int lingkarKepala
+    , String idAnak) {
         this.idData = idData;
         this.tglData = tglData;
         this.berat = berat;
         this.tinggi = tinggi;
         this.lingkarKepala = lingkarKepala;
-        this.anak = anak;
+        this.idAnak = idAnak;
     }
 
     public String getIdData() {
@@ -31,11 +34,11 @@ public class DataFisikAnak {
         this.idData = idData;
     }
 
-    public LocalDate getTglData() {
+    public String getTglData() {
         return tglData;
     }
 
-    public void setTglData(LocalDate tglData) {
+    public void setTglData(String tglData) {
         this.tglData = tglData;
     }
 
@@ -63,11 +66,11 @@ public class DataFisikAnak {
         this.lingkarKepala = lingkarKepala;
     }
 
-    public Anak getAnak() {
-        return anak;
+    public String getIdAnak() {
+        return idAnak;
     }
 
-    public void setAnak(Anak anak) {
-        this.anak = anak;
+    public void setIdAnak(String idAnak) {
+        this.idAnak = idAnak;
     }
 }

@@ -89,6 +89,7 @@
                 android:textStyle="bold"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/updateProfilIbu"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginTop="10dp"

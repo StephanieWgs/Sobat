@@ -35,6 +35,11 @@
     <string name="labelTglLhrAnak">Tanggal Lahir Anak</string>
     <string name="labelGenderAnak">Gender Anak</string>
 
+    <string name="infoIbu">Informasi Mums</string>
+    <string name="labelNama">Nama</string>
+    <string name="labelTglLhr">Tanggal Lahir</string>
+    <string name="labelNoTelp">Nomor Telepon</string>
+
     <string name="btnProfilAnak">Ubah Profil Anak</string>
     <string name="profil">Profil</string>
 

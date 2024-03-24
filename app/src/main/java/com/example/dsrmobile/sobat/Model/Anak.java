@@ -2,16 +2,18 @@ package com.example.dsrmobile.sobat.Model;
 
 import java.time.LocalDate;
 
-public class Anak {
+import io.realm.RealmObject;
+
+public class Anak extends RealmObject {
     private String idAnak;
     private String namaAnak;
-    private LocalDate tglLahirAnak;
+    private String tglLahirAnak;
     private String genderAnak;
     private String idIbu;
 
     public Anak(){}
 
-    public Anak(String idAnak, String namaAnak, LocalDate tglLahirAnak, String genderAnak, String idIbu) {
+    public Anak(String idAnak, String namaAnak, String tglLahirAnak, String genderAnak, String idIbu) {
         this.idAnak = idAnak;
         this.namaAnak = namaAnak;
         this.tglLahirAnak = tglLahirAnak;
@@ -35,11 +37,11 @@ public class Anak {
         this.namaAnak = namaAnak;
     }
 
-    public LocalDate getTglLahirAnak() {
+    public String getTglLahirAnak() {
         return tglLahirAnak;
     }
 
-    public void setTglLahirAnak(LocalDate tglLahirAnak) {
+    public void setTglLahirAnak(String tglLahirAnak) {
         this.tglLahirAnak = tglLahirAnak;
     }
 
