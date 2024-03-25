@@ -63,5 +63,31 @@
 
     <string name="waktu">12 jam lalu</string>
 
+    <string name="jdlLogin">Hai, Mums! Selamat Datang Kembali!</string>
+    <string name="subLogin">Mari lanjut pantau tumbuh kembang si Kecil!</string>
+
+    <string name="btnLogin">Masuk ke Sobat!</string>
+
+    <string name="username">Username</string>
+    <string name="pass">Password</string>
+    <string name="nama">Nama</string>
+    <string name="noTelp">Nomor Telepon</string>
+    <string name="tglLahir">Tanggal Lahir</string>
+
+    <string name="jdlRegister">Hai, Mums! Selamat Datang di Aplikasi Sobat!</string>
+
+    <string name="subRegister">Ayo daftarkan data diri Mums!</string>
+    <string name="reg">Buat Akun Sobat</string>
+
+    <string name="data">Data Sebelumnya</string>
+    <string name="isiData">11</string>
+    <string name="kg">kg berat badan</string>
+
+    <string name="kat">Kategori</string>
+    <string name="jenisKat">Sehat</string>
+    <string name="bb">range berat badan</string>
+
+    <string name="tambahData">Tambah Data Anak</string>
+
 
 </resources>

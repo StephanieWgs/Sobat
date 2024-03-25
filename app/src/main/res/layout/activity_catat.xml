@@ -49,6 +49,7 @@
         android:layout_marginTop="10dp"
         android:padding="30dp">
         <LinearLayout
+            android:id="@+id/detailCatat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -81,28 +82,6 @@
                     android:textColor="@color/hijauTua"
                     android:text="@string/umur">
                 </TextView>
-                
-                <LinearLayout
-                    android:layout_width="124dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/button_detail"
-                    android:gravity="center"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingRight="16dp"
-                    android:paddingLeft="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/fntKcl"
-                        android:textStyle="bold"
-                        android:textColor="@color/hijauTua"
-                        android:text="@string/detail">
-                    </TextView>
-
-                </LinearLayout>
 
             </LinearLayout>
 

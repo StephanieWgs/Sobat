@@ -2,7 +2,7 @@ package com.example.dsrmobile.sobat.Model;
 
 import io.realm.RealmObject;
 
-public class UserLogin {
+public class UserLogin extends RealmObject{
     private String username;
     private String password;
 

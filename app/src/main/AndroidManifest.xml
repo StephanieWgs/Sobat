@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Sobat"
         tools:targetApi="31">
         <activity
+            android:name=".DetailCatat"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".UpdateProfilIbu"
             android:exported="false" />
         <activity
@@ -37,7 +49,7 @@
             android:name=".Catat"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Awal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
