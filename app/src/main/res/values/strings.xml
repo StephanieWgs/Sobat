@@ -89,5 +89,9 @@
 
     <string name="tambahData">Tambah Data Anak</string>
 
+    <string name="notifJudul">Notifikasi</string>
+    <string name="notif1">Sartika Not Putri menjawab pertanyaanmu!</string>
+    <string name="notif_waktu">12 jam yang lalu.</string>
+
 
 </resources>
