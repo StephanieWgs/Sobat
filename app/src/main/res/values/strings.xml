@@ -93,5 +93,9 @@
     <string name="notif1">Sartika Not Putri menjawab pertanyaanmu!</string>
     <string name="notif_waktu">12 jam yang lalu.</string>
 
+    <string name="labelTglData">Tanggal Data</string>
+    <string name="labelBerat">Berat Anak (cm)</string>
+    <string name="labelTinggi">Tinggi Anak (cm)</string>
+    <string name="labelLingkarKepala">Lingkar Kepala Anak (cm)</string>
 
 </resources>

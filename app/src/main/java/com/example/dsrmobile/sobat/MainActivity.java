@@ -21,7 +21,7 @@ import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout catat1,catat2,profile,konsul,forum,imunisasi;
+    LinearLayout catat1,catat2,profile,konsul,forum,imunisasi,anak,tambahAnak;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         konsul = (LinearLayout) findViewById(R.id.konsul);
         forum = (LinearLayout) findViewById(R.id.forum);
         imunisasi = (LinearLayout) findViewById(R.id.imunisasi);
+        anak = (LinearLayout) findViewById(R.id.anak);
+        tambahAnak = (LinearLayout) findViewById(R.id.tambahAnak);
 
         catat1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +81,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Imunisasi.class);
+                startActivity(intent);
+            }
+        });
+
+        anak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DetailCatat.class);
+                startActivity(intent);
+            }
+        });
+
+        tambahAnak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TambahAnak.class);
                 startActivity(intent);
             }
         });
