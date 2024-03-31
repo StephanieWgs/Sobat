@@ -3,15 +3,23 @@ package com.example.dsrmobile.sobat.Model;
 import java.time.LocalDate;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.RealmClass;
+import io.realm.annotations.Required;
 
+@RealmClass
 public class DataFisikAnak extends RealmObject{
 
+    @PrimaryKey
     private String idData;
+    @Required
     private String tglData;
-    private int berat;
-    private int tinggi;
-    private int lingkarKepala;
 
+    private int berat;
+
+    private int tinggi;
+
+    private int lingkarKepala;
     private String idAnak;
 
     public DataFisikAnak(){}

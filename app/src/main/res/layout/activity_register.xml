@@ -53,6 +53,7 @@
             android:textStyle="bold"
             android:layout_marginTop="30dp"/>
         <EditText
+            android:id="@+id/nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -75,6 +76,7 @@
             android:layout_marginTop="20dp"
             android:textStyle="bold"/>
         <EditText
+            android:id="@+id/noTelp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -96,9 +98,10 @@
             android:layout_marginTop="20dp"
             android:textStyle="bold"/>
         <EditText
+            android:id="@+id/tglLahir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="date"
             android:layout_marginTop="10dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -118,6 +121,7 @@
             android:layout_marginTop="20dp"
             android:textStyle="bold"/>
         <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -140,6 +144,7 @@
             android:textStyle="bold"
             android:layout_marginTop="20dp"/>
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"

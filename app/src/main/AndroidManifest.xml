@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Sobat"
         tools:targetApi="31">
         <activity
-            android:name=".notifikasi"
+            android:name=".Notifikasi"
             android:exported="false" />
         <activity
             android:name=".DetailCatat"

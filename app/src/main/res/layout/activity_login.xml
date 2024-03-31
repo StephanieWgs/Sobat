@@ -51,6 +51,7 @@
             android:layout_marginTop="30dp"
             android:textStyle="bold"/>
         <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -73,9 +74,10 @@
             android:textStyle="bold"
             android:layout_marginTop="20dp"/>
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:layout_marginTop="10dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"

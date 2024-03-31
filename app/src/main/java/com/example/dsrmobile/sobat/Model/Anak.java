@@ -3,11 +3,19 @@ package com.example.dsrmobile.sobat.Model;
 import java.time.LocalDate;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.RealmClass;
+import io.realm.annotations.Required;
 
+@RealmClass
 public class Anak extends RealmObject {
+    @PrimaryKey
     private String idAnak;
+    @Required
     private String namaAnak;
+    @Required
     private String tglLahirAnak;
+    @Required
     private String genderAnak;
     private String idIbu;
 
