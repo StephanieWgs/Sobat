@@ -155,6 +155,13 @@ public class Util {
         return anak.getTglLahirAnak();
     }
 
+    public static String getGenderAnak(String idAnak){
+        Realm realm = Realm.getDefaultInstance();
+        Anak anak = realm.where(Anak.class).equalTo("idAnak", idAnak).findFirst();
+        return anak.getGenderAnak();
+    }
+
+
     public static String idAnakBaru(){
         Realm realm = Realm.getDefaultInstance();
         RealmResults<Anak> anaks = realm.where(Anak.class).findAll();

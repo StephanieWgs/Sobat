@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -20,6 +21,8 @@ public class UpdateProfilAnak extends AppCompatActivity {
     LinearLayout back,ubah;
     TextView nama1;
     EditText nama2, tglLahir;
+
+    ImageView fotoAnak;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +47,13 @@ public class UpdateProfilAnak extends AppCompatActivity {
         tglLahir = (EditText) findViewById(R.id.tglLahir);
         tglLahir.setText(Util.getTglLahirAnak(idAnak));
 
+        fotoAnak = (ImageView) findViewById(R.id.fotoAnak);
+        if (Util.getGenderAnak(idAnak).equalsIgnoreCase("Laki-laki")){
+            fotoAnak.setImageResource(R.drawable.boy_add_photo);
+        }
+        else{
+            fotoAnak.setImageResource(R.drawable.girl_add_photo);
+        }
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
