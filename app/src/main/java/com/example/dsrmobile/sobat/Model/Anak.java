@@ -1,6 +1,7 @@
 package com.example.dsrmobile.sobat.Model;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
@@ -29,6 +30,16 @@ public class Anak extends RealmObject {
         this.idIbu = idIbu;
     }
 
+    public int getUmurAnak(){
+        LocalDate tanggalLahir = LocalDate.parse(tglLahirAnak);
+        LocalDate hariIni = LocalDate.now();
+
+        // Menghitung periode antara tanggal lahir dan hari ini
+        Period periode = Period.between(tanggalLahir, hariIni);
+
+        // Mengembalikan umur dalam tahun
+        return periode.getYears();
+    }
     public String getIdAnak() {
         return idAnak;
     }

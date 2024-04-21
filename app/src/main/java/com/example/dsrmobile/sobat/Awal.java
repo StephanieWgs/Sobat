@@ -65,9 +65,11 @@ public class Awal extends AppCompatActivity {
 
         Util.simpanDataAnak("1","Budi Susanto","2022-02-02",
                 "Laki-laki","1");
-        Util.simpanDataAnak("2","Budi","2022-02-02",
+        Util.simpanDataAnak("2","Linda","2022-02-02",
+                "Perempuan","1");
+        Util.simpanDataAnak("3","Budi","2022-02-02",
                 "Laki-laki","2");
-        Util.simpanDataAnak("3","Susan","2022-02-02",
+        Util.simpanDataAnak("4","Susan","2022-02-02",
                 "Perempuan","3");
 
         Util.simpanDataFisik("1","2024-03-24",3,30,20,"1");

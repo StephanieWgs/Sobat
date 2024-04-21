@@ -33,6 +33,8 @@
             </TextView>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/notif"
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:gravity="end|top"
@@ -40,236 +42,198 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="45dp"
-        android:gravity="center">
-        <LinearLayout
-            android:layout_width="96dp"
-            android:layout_height="94dp"
-            android:gravity="end|top"
-            android:background="@drawable/ibu_add_photo">
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:text="@string/namaIbu"
-            android:textColor="@color/hitam"
-            android:textSize="@dimen/judul"
-            android:textStyle="bold"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pr"
-                android:textColor="@color/hijauTua"
-                android:textSize="@dimen/fntBsr"
-                android:textStyle="bold"/>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/line"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp">
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tglLhrIbu"
-                android:textColor="@color/hijauTua"
-                android:textSize="@dimen/fntBsr"
-                android:textStyle="bold"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/updateProfilIbu"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/fntBsr"
-                android:textColor="@color/putih"
-                android:textStyle="bold"
-                android:text="@string/btnProfilIbu">
-            </TextView>
-            <LinearLayout
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/icon_edit">
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        android:background="@drawable/kotak_besar"
-        android:padding="30dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sobatKcl"
-            android:textColor="@color/hijauTua"
-            android:textSize="@dimen/judul"
-            android:textStyle="bold"/>
-
+        android:layout_marginTop="20dp"
+        android:paddingBottom="70dp">
         <LinearLayout
-            android:id="@+id/detailProfilAnak"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/kotak_anak_prof"
-            android:gravity="center_vertical"
-            android:padding="20dp"
-            android:layout_marginTop="10dp">
-            <LinearLayout
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:background="@drawable/boy">
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/subjudul"
-                    android:textStyle="bold"
-                    android:textColor="@color/hijauTua"
-                    android:text="@string/namaAnak">
-                </TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fntKcl"
-                    android:textColor="@color/hijauTua"
-                    android:layout_marginTop="2dp"
-                    android:text="@string/masuk">
-                </TextView>
-                <LinearLayout
-                    android:layout_width="160dp"
-                    android:layout_height="8dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/bar">
-                </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/fntBsr"
-                    android:layout_marginTop="5dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/hijauTua"
-                    android:text="@string/umur">
-                </TextView>
-            </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="end">
-
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:gravity="center">
                 <LinearLayout
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_width="96dp"
+                    android:layout_height="94dp"
                     android:gravity="end|top"
-                    android:background="@drawable/arrow">
+                    android:background="@drawable/ibu_add_photo">
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/namaIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="@string/namaIbu"
+                    android:textColor="@color/hitam"
+                    android:textSize="@dimen/judul"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pr"
+                        android:textColor="@color/hijauTua"
+                        android:textSize="@dimen/fntBsr"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp">
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tglLahirIbu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tglLhrIbu"
+                        android:textColor="@color/hijauTua"
+                        android:textSize="@dimen/fntBsr"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/updateProfilIbu"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/fntBsr"
+                        android:textColor="@color/putih"
+                        android:textStyle="bold"
+                        android:text="@string/btnProfilIbu">
+                    </TextView>
+                    <LinearLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/icon_edit">
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:padding="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sobatKcl"
+                        android:textColor="@color/hijauTua"
+                        android:textSize="@dimen/judul"
+                        android:textStyle="bold" />
+
+                    <ListView
+                        android:id="@+id/listAnak"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:id="@+id/tambahAnak"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tmbhProfil"
+                            android:textColor="@color/putih"
+                            android:textSize="@dimen/fntBsr"
+                            android:textStyle="bold">
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/add">
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/general"
+                        android:textColor="@color/hijauTua"
+                        android:textSize="@dimen/judul"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/setting">
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/pengaturan"
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/fntBsr"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/logout">
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/logout"
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/fntBsr"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/tambahAnak"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:background="@drawable/button_profile"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/fntBsr"
-                android:textColor="@color/putih"
-                android:textStyle="bold"
-                android:text="@string/tmbhProfil">
-            </TextView>
-            <LinearLayout
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/add">
-            </LinearLayout>
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/general"
-            android:textColor="@color/hijauTua"
-            android:textSize="@dimen/judul"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:gravity="center_vertical">
-            <LinearLayout
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/setting">
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pengaturan"
-                android:textColor="@color/hitam"
-                android:textSize="@dimen/fntBsr"
-                android:layout_marginStart="10dp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:gravity="center_vertical">
-            <LinearLayout
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/logout">
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/logout"
-                android:textColor="@color/hitam"
-                android:textSize="@dimen/fntBsr"
-                android:layout_marginStart="10dp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
     <!--Menu Tab-->
 

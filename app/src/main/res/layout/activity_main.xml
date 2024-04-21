@@ -43,6 +43,8 @@
             android:gravity="end|top">
 
             <LinearLayout
+                android:id="@+id/notif"
+                android:orientation="horizontal"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:gravity="end|top"
@@ -56,141 +58,34 @@
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         android:paddingBottom="70dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <HorizontalScrollView
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="30dp">
+
+            <ListView
+                android:id="@+id/listAnak"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp">
-
-                <LinearLayout
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:id="@+id/anak"
-                        android:layout_width="310dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@drawable/kotak_anak"
-                        android:padding="20dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="@dimen/subjudul"
-                                android:textStyle="bold"
-                                android:textColor="@color/hijauTua"
-                                android:text="@string/namaAnak">
-                            </TextView>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="@dimen/fntKcl"
-                                android:textColor="@color/hijauTua"
-                                android:layout_marginTop="5dp"
-                                android:text="@string/masuk">
-                            </TextView>
-                            <LinearLayout
-                                android:layout_width="160dp"
-                                android:layout_height="8dp"
-                                android:layout_marginTop="5dp"
-                                android:background="@drawable/bar">
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="@dimen/fntBsr"
-                                android:textStyle="bold"
-                                android:layout_marginTop="5dp"
-                                android:textColor="@color/hijauTua"
-                                android:text="@string/umur">
-                            </TextView>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end|top">
-
-                            <LinearLayout
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:layout_marginStart="20dp"
-                                android:gravity="end|top"
-                                android:background="@drawable/boy">
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="310dp"
-                        android:layout_height="130dp"
-                        android:layout_marginStart="20dp"
-                        android:background="@drawable/kotak_tambah"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/fntBsr"
-                            android:textColor="@color/hijauTua"
-                            android:layout_marginTop="30dp"
-                            android:text="@string/captionTambah">
-                        </TextView>
-
-                        <LinearLayout
-                            android:id="@+id/tambahAnak"
-                            android:layout_width="270dp"
-                            android:layout_height="36dp"
-                            android:layout_marginTop="20dp"
-                            android:background="@drawable/button"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="@dimen/fntBsr"
-                                android:textColor="@color/putih"
-                                android:textStyle="bold"
-                                android:text="@string/buttonTmbh">
-                            </TextView>
-                            <LinearLayout
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginStart="8dp"
-                                android:background="@drawable/add">
-                            </LinearLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:orientation="vertical"
-                android:background="@drawable/kotak_besar"
-                android:padding="30dp">
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/judul"
-                    android:textStyle="bold"
+                    android:text="@string/menu"
                     android:textColor="@color/hijauTua"
-                    android:text="@string/menu">
+                    android:textSize="@dimen/judul"
+                    android:textStyle="bold">
                 </TextView>
 
                 <LinearLayout
@@ -202,95 +97,103 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <LinearLayout
                             android:id="@+id/catat1"
-                            android:orientation="horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/tombol_catat">
+                            android:background="@drawable/tombol_catat"
+                            android:orientation="horizontal">
                         </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/fntKcl"
-                            android:textStyle="bold"
                             android:layout_marginTop="3dp"
+                            android:text="@string/catat"
                             android:textColor="@color/hijauTua"
-                            android:text="@string/catat">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginStart="20dp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <LinearLayout
                             android:id="@+id/konsul"
-                            android:orientation="horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/tombol_konsul">
+                            android:background="@drawable/tombol_konsul"
+                            android:orientation="horizontal">
                         </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/fntKcl"
-                            android:textStyle="bold"
                             android:layout_marginTop="3dp"
+                            android:text="@string/konsul"
                             android:textColor="@color/hijauTua"
-                            android:text="@string/konsul">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginStart="20dp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <LinearLayout
                             android:id="@+id/forum"
-                            android:orientation="horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/tombol_forum">
+                            android:background="@drawable/tombol_forum"
+                            android:orientation="horizontal">
                         </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/fntKcl"
-                            android:textStyle="bold"
                             android:layout_marginTop="3dp"
+                            android:text="@string/forum"
                             android:textColor="@color/hijauTua"
-                            android:text="@string/forum">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginStart="20dp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <LinearLayout
                             android:id="@+id/imunisasi"
-                            android:orientation="horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/tombol_imun">
+                            android:background="@drawable/tombol_imun"
+                            android:orientation="horizontal">
                         </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/fntKcl"
-                            android:textStyle="bold"
                             android:layout_marginTop="3dp"
+                            android:text="@string/imun"
                             android:textColor="@color/hijauTua"
-                            android:text="@string/imun">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
                     </LinearLayout>
                 </LinearLayout>
@@ -304,50 +207,55 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="310dp"
                             android:layout_height="wrap_content"
-                            android:padding="20dp"
                             android:background="@drawable/kotak_forum"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
                             <LinearLayout
                                 android:layout_width="270dp"
                                 android:layout_height="90dp"
                                 android:background="@drawable/gbr_forum">
                             </LinearLayout>
+
                             <TextView
                                 android:layout_width="270dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                android:textStyle="bold"
-                                android:textSize="@dimen/fntBsr"
+                                android:text="@string/judulBerita"
                                 android:textColor="@color/hijauTua"
-                                android:text="@string/judulBerita">
+                                android:textSize="@dimen/fntBsr"
+                                android:textStyle="bold">
                             </TextView>
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="310dp"
                             android:layout_height="wrap_content"
-                            android:padding="20dp"
+                            android:layout_marginStart="20dp"
                             android:background="@drawable/kotak_forum"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
-                            android:layout_marginStart="20dp">
+                            android:padding="20dp">
+
                             <LinearLayout
                                 android:layout_width="270dp"
                                 android:layout_height="90dp"
                                 android:background="@drawable/gbr_forum">
                             </LinearLayout>
+
                             <TextView
                                 android:layout_width="270dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                android:textStyle="bold"
-                                android:textSize="@dimen/fntBsr"
+                                android:text="@string/judulBerita"
                                 android:textColor="@color/hijauTua"
-                                android:text="@string/judulBerita">
+                                android:textSize="@dimen/fntBsr"
+                                android:textStyle="bold">
                             </TextView>
                         </LinearLayout>
                     </LinearLayout>
@@ -356,17 +264,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/judul"
-                    android:textStyle="bold"
-                    android:textColor="@color/hijauTua"
                     android:layout_marginTop="30dp"
-                    android:text="@string/forum">
+                    android:text="@string/forum"
+                    android:textColor="@color/hijauTua"
+                    android:textSize="@dimen/judul"
+                    android:textStyle="bold">
                 </TextView>
 
                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/kotak_forum"
                     android:orientation="vertical"
                     android:padding="20dp">
@@ -374,140 +282,148 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:background="@drawable/ibu">
                         </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:textSize="@dimen/fntKcl"
+                            android:text="@string/namaIbu"
                             android:textColor="@color/hijauTua"
-                            android:textStyle="bold"
-                            android:text="@string/namaIbu">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:textSize="@dimen/fntKcl"
+                            android:text="@string/detailPosting"
                             android:textColor="@color/abu"
-                            android:textStyle="bold"
-                            android:text="@string/detailPosting">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="330dp"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/fntSdg"
                         android:layout_marginTop="5dp"
+                        android:text="@string/judulForum"
                         android:textColor="@color/hijauTua"
-                        android:textStyle="bold"
-                        android:text="@string/judulForum">
+                        android:textSize="@dimen/fntSdg"
+                        android:textStyle="bold">
                     </TextView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
                     android:background="@drawable/kotak_forum"
                     android:orientation="vertical"
-                    android:layout_marginTop="-1dp"
                     android:padding="20dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:background="@drawable/ibu">
                         </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:textSize="@dimen/fntKcl"
+                            android:text="@string/namaIbu"
                             android:textColor="@color/hijauTua"
-                            android:textStyle="bold"
-                            android:text="@string/namaIbu">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:textSize="@dimen/fntKcl"
+                            android:text="@string/detailPosting"
                             android:textColor="@color/abu"
-                            android:textStyle="bold"
-                            android:text="@string/detailPosting">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="330dp"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/fntSdg"
                         android:layout_marginTop="5dp"
+                        android:text="@string/judulForum"
                         android:textColor="@color/hijauTua"
-                        android:textStyle="bold"
-                        android:text="@string/judulForum">
+                        android:textSize="@dimen/fntSdg"
+                        android:textStyle="bold">
                     </TextView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
                     android:background="@drawable/kotak_forum"
                     android:orientation="vertical"
-                    android:layout_marginTop="-1dp"
                     android:padding="20dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:background="@drawable/ibu">
                         </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:textSize="@dimen/fntKcl"
+                            android:text="@string/namaIbu"
                             android:textColor="@color/hijauTua"
-                            android:textStyle="bold"
-                            android:text="@string/namaIbu">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:textSize="@dimen/fntKcl"
+                            android:text="@string/detailPosting"
                             android:textColor="@color/abu"
-                            android:textStyle="bold"
-                            android:text="@string/detailPosting">
+                            android:textSize="@dimen/fntKcl"
+                            android:textStyle="bold">
                         </TextView>
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="330dp"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/fntSdg"
                         android:layout_marginTop="5dp"
+                        android:text="@string/judulForum"
                         android:textColor="@color/hijauTua"
-                        android:textStyle="bold"
-                        android:text="@string/judulForum">
+                        android:textSize="@dimen/fntSdg"
+                        android:textStyle="bold">
                     </TextView>
                 </LinearLayout>
             </LinearLayout>
@@ -515,7 +431,6 @@
     </ScrollView>
 
 <!--Menu Tab-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

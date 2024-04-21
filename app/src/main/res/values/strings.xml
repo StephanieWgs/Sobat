@@ -14,6 +14,8 @@
     <string name="imun">Imunisasi</string>
     <string name="judulBerita">Bagaimana Caranya Agar si Kecil Doyan Makan Terus?</string>
 
+    <string name="home">Home</string>
+
     <string name="namaIbu">Santika Putri</string>
     <string name="detailPosting">Diposting 1 jam yang lalu</string>
     <string name="judulForum">Anakku suka bersin kalo dekat sama kucing rumah.</string>
@@ -97,5 +99,17 @@
     <string name="labelBerat">Berat Anak (cm)</string>
     <string name="labelTinggi">Tinggi Anak (cm)</string>
     <string name="labelLingkarKepala">Lingkar Kepala Anak (cm)</string>
+
+    <string name="mulaiKonsul">Mulai Konsultasi</string>
+    <string name="dokUmum">Dokter Umum</string>
+    <string name="dokAnak">Dokter Spesialis Anak</string>
+
+    <string name="namaDok1">Lisa Susan</string>
+    <string name="namaDok2">Butet</string>
+    <string name="namaDok3">Antanasia</string>
+    <string name="namaDok4">Buhanny</string>
+
+    <string name="riwayatKonsul">Riwayat Konsultasi</string>
+
 
 </resources>

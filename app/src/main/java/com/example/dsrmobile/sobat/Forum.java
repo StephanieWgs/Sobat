@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 
 public class Forum extends AppCompatActivity {
 
-    LinearLayout detailForum1,detailForum2;
+    LinearLayout detailForum1,detailForum2, back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +17,7 @@ public class Forum extends AppCompatActivity {
 
         detailForum1 = (LinearLayout) findViewById(R.id.detailForum1);
         detailForum2 = (LinearLayout) findViewById(R.id.detailForum2);
+        back = (LinearLayout) findViewById(R.id.back);
 
         detailForum1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,13 @@ public class Forum extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Forum.this, DetailForum.class);
                 startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

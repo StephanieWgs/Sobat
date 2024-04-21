@@ -18,7 +18,7 @@ import io.realm.Realm;
 
 public class Register extends AppCompatActivity {
 
-    LinearLayout register;
+    LinearLayout register, back;
     EditText nama, noTelp,tglLahir, username,password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         register = (LinearLayout) findViewById(R.id.register);
+        back = (LinearLayout) findViewById(R.id.back);
 
         nama = (EditText) findViewById(R.id.nama);
         noTelp = (EditText) findViewById(R.id.noTelp);
@@ -41,15 +42,28 @@ public class Register extends AppCompatActivity {
                 String dataTglLahir = tglLahir.getText().toString();
                 String dataUsername = username.getText().toString();
                 String dataPassword = password.getText().toString();
-                Util.simpanDataIbu(Util.idIbuBaru(),dataNama,dataNoTelp,dataTglLahir,
-                        dataUsername,dataPassword);
-                Intent intent = new Intent(Register.this, Login.class);
-                startActivity(intent);
+                String message = "";
+                if (Util.usernameAda(dataUsername)){
+                    Util.simpanDataIbu(Util.idIbuBaru(),dataNama,dataNoTelp,dataTglLahir,
+                            dataUsername,dataPassword);
+                    Intent intent = new Intent(Register.this, Login.class);
+                    startActivity(intent);
 
-                String message = "Akun berhasil dibuat";
+                    message = "Akun berhasil dibuat";
+                }
+                else{
+                    message = "Username sudah ada";
+                }
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(Register.this, message, duration);
                 toast.show();
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

@@ -26,6 +26,8 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/back"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -75,6 +77,7 @@
             android:layout_marginTop="10dp"
             android:textStyle="bold"/>
         <EditText
+            android:id="@+id/namaAnak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -97,6 +100,7 @@
             android:layout_marginTop="20dp"
             android:textStyle="bold"/>
         <EditText
+            android:id="@+id/tglLahirAnak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -118,19 +122,19 @@
             android:textSize="@dimen/fntSdg"
             android:layout_marginTop="20dp"
             android:textStyle="bold"/>
-        <EditText
+        <Spinner
+            android:id="@+id/genderAnak"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_marginTop="10dp"
+            android:textColor="@color/hijauTua"
+            android:textSize="@dimen/fntBsr"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:background="@drawable/edit_text"
-            android:textColor="@color/hijauTua"
-            android:textSize="@dimen/fntBsr"
-            android:hint="@string/labelGenderAnak"/>
+            android:paddingEnd="20dp"/>
+
 
         <LinearLayout
             android:id="@+id/tambah"

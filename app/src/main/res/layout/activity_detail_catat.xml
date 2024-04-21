@@ -27,6 +27,8 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/back"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -54,11 +56,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/tombolNotif"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:background="@drawable/notification"
+            android:backgroundTint="@color/putih"
             android:gravity="end|top">
         </LinearLayout>
     </LinearLayout>
@@ -98,6 +100,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/beratBadan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"

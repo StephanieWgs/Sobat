@@ -1,13 +1,16 @@
 package com.example.dsrmobile.sobat;
 
+import com.example.dsrmobile.sobat.Adapter.AnakAdapter;
 import com.example.dsrmobile.sobat.util.Util;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import com.example.dsrmobile.sobat.Model.Anak;
 import com.example.dsrmobile.sobat.Model.DataFisikAnak;
@@ -21,12 +24,18 @@ import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout catat1,catat2,profile,konsul,forum,imunisasi,anak,tambahAnak;
+    LinearLayout catat1,catat2,profile,konsul,forum,imunisasi,anak, notif;
+    ListView listAnak;
+
+    ArrayList<Anak> anakArrayList;
+    private static AnakAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SharedPreferences sharedPreferences = getSharedPreferences("loginData", MODE_PRIVATE);
+        String idIbu = sharedPreferences.getString("idIbu", null);
 
         catat1 = (LinearLayout) findViewById(R.id.catat1);
         catat2 = (LinearLayout) findViewById(R.id.catat2);
@@ -34,8 +43,14 @@ public class MainActivity extends AppCompatActivity {
         konsul = (LinearLayout) findViewById(R.id.konsul);
         forum = (LinearLayout) findViewById(R.id.forum);
         imunisasi = (LinearLayout) findViewById(R.id.imunisasi);
-        anak = (LinearLayout) findViewById(R.id.anak);
-        tambahAnak = (LinearLayout) findViewById(R.id.tambahAnak);
+        notif = (LinearLayout) findViewById(R.id.notif);
+
+        listAnak = (ListView) findViewById(R.id.listAnak);
+        anakArrayList = new ArrayList<>();
+        anakArrayList = Util.cariAnakByIdIbu(Util.getAllAnak(),idIbu);
+
+        adapter = new AnakAdapter(anakArrayList,getApplicationContext());
+        listAnak.setAdapter(adapter);
 
         catat1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         konsul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Konsultasi.class);
+                Intent intent = new Intent(MainActivity.this, ListDokter.class);
                 startActivity(intent);
             }
         });
@@ -93,13 +108,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tambahAnak.setOnClickListener(new View.OnClickListener() {
+        notif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TambahAnak.class);
+                Intent intent = new Intent(MainActivity.this, Notifikasi.class);
                 startActivity(intent);
             }
         });
     }
-
 }
