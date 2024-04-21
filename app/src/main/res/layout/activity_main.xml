@@ -326,7 +326,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-1dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/kotak_forum"
                     android:orientation="vertical"
                     android:padding="20dp">
@@ -378,7 +378,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-1dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/kotak_forum"
                     android:orientation="vertical"
                     android:padding="20dp">

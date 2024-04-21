@@ -65,7 +65,7 @@ public class Awal extends AppCompatActivity {
 
         Util.simpanDataAnak("1","Budi Susanto","2022-02-02",
                 "Laki-laki","1");
-        Util.simpanDataAnak("2","Linda","2022-02-02",
+        Util.simpanDataAnak("2","Linda","2020-01-07",
                 "Perempuan","1");
         Util.simpanDataAnak("3","Budi","2022-02-02",
                 "Laki-laki","2");
@@ -73,7 +73,7 @@ public class Awal extends AppCompatActivity {
                 "Perempuan","3");
 
         Util.simpanDataFisik("1","2024-03-24",3,30,20,"1");
-        Util.simpanDataFisik("2","2024-03-24",3,30,20,"2");
-        Util.simpanDataFisik("3","2024-03-24",3,30,20,"3");
+        Util.simpanDataFisik("2","2024-03-24",5,30,20,"2");
+        Util.simpanDataFisik("3","2024-03-24",6,30,20,"3");
     }
 }

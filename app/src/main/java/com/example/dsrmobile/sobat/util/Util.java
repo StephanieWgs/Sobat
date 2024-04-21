@@ -179,6 +179,13 @@ public class Util {
         realm.close();
     }
 
+    public static String idDataBaru(){
+        Realm realm = Realm.getDefaultInstance();
+        RealmResults<DataFisikAnak> dataFisikAnaks = realm.where(DataFisikAnak.class).findAll();
+        int idAnakBaru = dataFisikAnaks.size() + 1;
+        return String.valueOf(idAnakBaru);
+    }
+
     public static int getBeratBadan(String idAnak){
         Realm realm = Realm.getDefaultInstance();
         DataFisikAnak dataFisikAnak = realm.where(DataFisikAnak.class).equalTo("idAnak", idAnak).findFirst();

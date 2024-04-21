@@ -27,12 +27,15 @@ public class DetailCatat extends AppCompatActivity {
         back = (LinearLayout) findViewById(R.id.back);
 
         beratBadan = (TextView) findViewById(R.id.beratBadan);
-        beratBadan.setText(Util.getBeratBadan(idAnak));
+        int beratBadanAnak = Util.getBeratBadan(idAnak);
+        beratBadan.setText(String.valueOf(beratBadanAnak));
 
         tambahDataFisik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DetailCatat.this, TambahDataFisik.class);
+                // Menyertakan idAnak sebagai ekstra dalam Intent
+                intent.putExtra("idAnak", idAnak);
                 startActivity(intent);
             }
         });

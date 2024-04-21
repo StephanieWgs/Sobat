@@ -59,7 +59,6 @@ public class TambahAnak extends AppCompatActivity {
 
                 if(!nama.equals("") && !tglLahir.equals("")){
                     Util.simpanDataAnak(Util.idAnakBaru(), nama,tglLahir,gender,idIbu);
-                    Util.simpanDataAnak(Util.idAnakBaru(), nama,tglLahir,gender,idIbu);
 
                     Intent intent = new Intent(TambahAnak.this, Profil.class);
                     startActivity(intent);

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -100,18 +101,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        anak.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DetailCatat.class);
-                startActivity(intent);
-            }
-        });
-
         notif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Notifikasi.class);
+                startActivity(intent);
+            }
+        });
+
+        listAnak.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String idAnak = (String) view.getTag(R.id.idAnak);
+                Intent intent = new Intent(MainActivity.this, DetailCatat.class);
+                // Menyertakan idAnak sebagai ekstra dalam Intent
+                intent.putExtra("idAnak", idAnak);
                 startActivity(intent);
             }
         });
