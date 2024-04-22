@@ -45,7 +45,7 @@ public class TambahDataFisik extends AppCompatActivity {
 
                 if(!tglDataFisik.equals("") && beratAnak != 0 && tinggiAnak != 0 && lingkarKepalaAnak != 0){
                     Util.simpanDataFisik(Util.idDataBaru(),tglDataFisik,beratAnak,tinggiAnak,lingkarKepalaAnak,idAnak);
-                    Intent intent = new Intent(TambahDataFisik.this, DetailCatat.class);
+                    Intent intent = new Intent(TambahDataFisik.this, MainActivity.class);
                     startActivity(intent);
 
                     message = "Data fisik anak berhasil ditambah!";
